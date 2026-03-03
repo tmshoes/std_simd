@@ -1,0 +1,144 @@
+In file included from /usr/include/c++/15.2.1/experimental/simd:74,
+                 from reason_3/file.cpp:2:
+/usr/include/c++/15.2.1/experimental/bits/simd.h: In instantiation of 'constexpr _TW std::experimental::parallelism_v2::__andnot(_TW, _TW) [with _TW = _SimdWrapper<_Float16, 8, void>]':
+/usr/include/c++/15.2.1/experimental/bits/simd_x86.h:845:28:   required from 'static constexpr std::experimental::parallelism_v2::_SimdWrapper<_Tp, _Np> std::experimental::parallelism_v2::_CommonImplX86::_S_blend(std::experimental::parallelism_v2::_SimdWrapper<decltype (__int_for_sizeof<sizeof (_Tp)>()), _Np>, std::experimental::parallelism_v2::_SimdWrapper<_Tp, _Np>, std::experimental::parallelism_v2::_SimdWrapper<_Tp, _Np>) [with _Tp = _Float16; long unsigned int _Np = 8; decltype (__int_for_sizeof<sizeof (_Tp)>()) = short int]'
+  845 |           auto __r = __or(__andnot(__kk, __at0), __and(__kk, __at1));
+      |                           ~~~~~~~~^~~~~~~~~~~~~
+/usr/include/c++/15.2.1/experimental/bits/simd_builtin.h:2361:33:   required from 'static constexpr void std::experimental::parallelism_v2::_SimdImplBuiltin<_Abi, <template-parameter-1-2> >::_S_masked_assign(std::experimental::parallelism_v2::_SimdWrapper<_K, _Np>, std::experimental::parallelism_v2::_SimdWrapper<_Tp, _Np>&, std::__type_identity_t<std::experimental::parallelism_v2::_SimdWrapper<_Tp, _Np> >) [with _Tp = _Float16; _K = short int; long unsigned int _Np = 8; _Abi = std::experimental::parallelism_v2::simd_abi::_VecBuiltin<16>; <template-parameter-1-2> = std::experimental::parallelism_v2::__detail::_MachineFlagsTemplate<221055, 10>; std::__type_identity_t<std::experimental::parallelism_v2::_SimdWrapper<_Tp, _Np> > = std::__type_identity<std::experimental::parallelism_v2::_SimdWrapper<_Float16, 8, void> >::type]'
+ 2361 |           __lhs = _CommonImpl::_S_blend(__k, __lhs, __rhs);
+      |                   ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/usr/include/c++/15.2.1/experimental/bits/simd.h:3654:25:   required from 'void std::experimental::parallelism_v2::where_expression<_M, _Tp>::operator=(_Up&&) && [with _Up = std::experimental::parallelism_v2::simd<_Float16>; _M = std::experimental::parallelism_v2::simd_mask<_Float16, std::experimental::parallelism_v2::simd_abi::_VecBuiltin<16> >; _Tp = std::experimental::parallelism_v2::simd<_Float16>]'
+ 3654 |         _Impl::_S_masked_assign(__data(_M_k), __data(_M_value),
+      |         ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3655 |                                 __to_value_type_or_member_type<_Tp>(
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3656 |                                   static_cast<_Up&&>(__x)));
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~
+reason_3/file.cpp:8:42:   required from here
+    8 |     std::experimental::where(m, x) = x + x;
+      |                                          ^
+/usr/include/c++/15.2.1/experimental/bits/simd.h:2050:47: error: no match for call to '(const std::experimental::parallelism_v2::<unnamed struct>) (const __vector(8) _Float16&, const __vector(8) _Float16&)'
+ 2050 |                 const auto __r = _S_x86_andnot(__ai, __bi);
+      |                                  ~~~~~~~~~~~~~^~~~~~~~~~~~
+/usr/include/c++/15.2.1/experimental/bits/simd.h:1973:1: note: there are 9 candidates
+ 1973 | {
+      | ^
+/usr/include/c++/15.2.1/experimental/bits/simd.h:1975:3: note: candidate 1: '__v4sf std::experimental::parallelism_v2::<unnamed struct>::operator()(__v4sf, __v4sf) const'
+ 1975 |   operator()(__v4sf __a, __v4sf __b) const noexcept
+      |   ^~~~~~~~
+/usr/include/c++/15.2.1/experimental/bits/simd.h:1975:21: note: no known conversion for argument 1 from 'const __vector(8) _Float16' to '__v4sf'
+ 1975 |   operator()(__v4sf __a, __v4sf __b) const noexcept
+      |              ~~~~~~~^~~
+/usr/include/c++/15.2.1/experimental/bits/simd.h:1979:3: note: candidate 2: '__v2df std::experimental::parallelism_v2::<unnamed struct>::operator()(__v2df, __v2df) const'
+ 1979 |   operator()(__v2df __a, __v2df __b) const noexcept
+      |   ^~~~~~~~
+/usr/include/c++/15.2.1/experimental/bits/simd.h:1979:21: note: no known conversion for argument 1 from 'const __vector(8) _Float16' to '__v2df'
+ 1979 |   operator()(__v2df __a, __v2df __b) const noexcept
+      |              ~~~~~~~^~~
+/usr/include/c++/15.2.1/experimental/bits/simd.h:1983:3: note: candidate 3: '__v2di std::experimental::parallelism_v2::<unnamed struct>::operator()(__v2di, __v2di) const'
+ 1983 |   operator()(__v2di __a, __v2di __b) const noexcept
+      |   ^~~~~~~~
+/usr/include/c++/15.2.1/experimental/bits/simd.h:1983:21: note: no known conversion for argument 1 from 'const __vector(8) _Float16' to '__v2di'
+ 1983 |   operator()(__v2di __a, __v2di __b) const noexcept
+      |              ~~~~~~~^~~
+/usr/include/c++/15.2.1/experimental/bits/simd.h:1987:3: note: candidate 4: '__v8sf std::experimental::parallelism_v2::<unnamed struct>::operator()(__v8sf, __v8sf) const'
+ 1987 |   operator()(__v8sf __a, __v8sf __b) const noexcept
+      |   ^~~~~~~~
+/usr/include/c++/15.2.1/experimental/bits/simd.h:1987:21: note: no known conversion for argument 1 from 'const __vector(8) _Float16' to '__v8sf'
+ 1987 |   operator()(__v8sf __a, __v8sf __b) const noexcept
+      |              ~~~~~~~^~~
+/usr/include/c++/15.2.1/experimental/bits/simd.h:1991:3: note: candidate 5: '__v4df std::experimental::parallelism_v2::<unnamed struct>::operator()(__v4df, __v4df) const'
+ 1991 |   operator()(__v4df __a, __v4df __b) const noexcept
+      |   ^~~~~~~~
+/usr/include/c++/15.2.1/experimental/bits/simd.h:1991:21: note: no known conversion for argument 1 from 'const __vector(8) _Float16' to '__v4df'
+ 1991 |   operator()(__v4df __a, __v4df __b) const noexcept
+      |              ~~~~~~~^~~
+/usr/include/c++/15.2.1/experimental/bits/simd.h:1995:3: note: candidate 6: '__v4di std::experimental::parallelism_v2::<unnamed struct>::operator()(__v4di, __v4di) const'
+ 1995 |   operator()(__v4di __a, __v4di __b) const noexcept
+      |   ^~~~~~~~
+/usr/include/c++/15.2.1/experimental/bits/simd.h:1995:21: note: no known conversion for argument 1 from 'const __vector(8) _Float16' to '__v4di'
+ 1995 |   operator()(__v4di __a, __v4di __b) const noexcept
+      |              ~~~~~~~^~~
+/usr/include/c++/15.2.1/experimental/bits/simd.h:2006:3: note: candidate 7: '__v16sf std::experimental::parallelism_v2::<unnamed struct>::operator()(__v16sf, __v16sf) const'
+ 2006 |   operator()(__v16sf __a, __v16sf __b) const noexcept
+      |   ^~~~~~~~
+/usr/include/c++/15.2.1/experimental/bits/simd.h:2006:22: note: no known conversion for argument 1 from 'const __vector(8) _Float16' to '__v16sf'
+ 2006 |   operator()(__v16sf __a, __v16sf __b) const noexcept
+      |              ~~~~~~~~^~~
+/usr/include/c++/15.2.1/experimental/bits/simd.h:2017:3: note: candidate 8: '__v8df std::experimental::parallelism_v2::<unnamed struct>::operator()(__v8df, __v8df) const'
+ 2017 |   operator()(__v8df __a, __v8df __b) const noexcept
+      |   ^~~~~~~~
+/usr/include/c++/15.2.1/experimental/bits/simd.h:2017:21: note: no known conversion for argument 1 from 'const __vector(8) _Float16' to '__v8df'
+ 2017 |   operator()(__v8df __a, __v8df __b) const noexcept
+      |              ~~~~~~~^~~
+/usr/include/c++/15.2.1/experimental/bits/simd.h:2028:3: note: candidate 9: '__v8di std::experimental::parallelism_v2::<unnamed struct>::operator()(__v8di, __v8di) const'
+ 2028 |   operator()(__v8di __a, __v8di __b) const noexcept
+      |   ^~~~~~~~
+/usr/include/c++/15.2.1/experimental/bits/simd.h:2028:21: note: no known conversion for argument 1 from 'const __vector(8) _Float16' to '__v8di'
+ 2028 |   operator()(__v8di __a, __v8di __b) const noexcept
+      |              ~~~~~~~^~~
+/usr/include/c++/15.2.1/experimental/bits/simd.h:2054:26: error: no type named 'type' in 'using _TVT = std::conditional_t<true, std::experimental::parallelism_v2::_SimdWrapper<_Float16, 8, void>, std::experimental::parallelism_v2::_VectorTraitsImpl<std::experimental::parallelism_v2::_SimdWrapper<_Float16, 8, void>, void> >' {aka 'using std::conditional<true, std::experimental::parallelism_v2::_SimdWrapper<_Float16, 8, void>, std::experimental::parallelism_v2::_VectorTraitsImpl<std::experimental::parallelism_v2::_SimdWrapper<_Float16, 8, void>, void> >::type = struct std::experimental::parallelism_v2::_SimdWrapper<_Float16, 8, void>'}
+ 2054 |                   return reinterpret_cast<typename _TVT::type>(__r);
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/15.2.1/experimental/simd:80:
+/usr/include/c++/15.2.1/experimental/bits/simd_x86.h: In instantiation of 'static _Tp std::experimental::parallelism_v2::_CommonImplX86::_S_blend_intrin(_Tp, _Tp, _Tp) [with _Tp = __vector(8) _Float16]':
+/usr/include/c++/15.2.1/experimental/bits/simd_x86.h:863:28:   required from 'static constexpr std::experimental::parallelism_v2::_SimdWrapper<_Tp, _Np> std::experimental::parallelism_v2::_CommonImplX86::_S_blend(std::experimental::parallelism_v2::_SimdWrapper<decltype (__int_for_sizeof<sizeof (_Tp)>()), _Np>, std::experimental::parallelism_v2::_SimdWrapper<_Tp, _Np>, std::experimental::parallelism_v2::_SimdWrapper<_Tp, _Np>) [with _Tp = _Float16; long unsigned int _Np = 8; decltype (__int_for_sizeof<sizeof (_Tp)>()) = short int]'
+  863 |             return _S_blend_intrin(__to_intrin(__kk), __to_intrin(__at0),
+      |                    ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  864 |                                    __to_intrin(__at1));
+      |                                    ~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/15.2.1/experimental/bits/simd_builtin.h:2361:33:   required from 'static constexpr void std::experimental::parallelism_v2::_SimdImplBuiltin<_Abi, <template-parameter-1-2> >::_S_masked_assign(std::experimental::parallelism_v2::_SimdWrapper<_K, _Np>, std::experimental::parallelism_v2::_SimdWrapper<_Tp, _Np>&, std::__type_identity_t<std::experimental::parallelism_v2::_SimdWrapper<_Tp, _Np> >) [with _Tp = _Float16; _K = short int; long unsigned int _Np = 8; _Abi = std::experimental::parallelism_v2::simd_abi::_VecBuiltin<16>; <template-parameter-1-2> = std::experimental::parallelism_v2::__detail::_MachineFlagsTemplate<221055, 10>; std::__type_identity_t<std::experimental::parallelism_v2::_SimdWrapper<_Tp, _Np> > = std::__type_identity<std::experimental::parallelism_v2::_SimdWrapper<_Float16, 8, void> >::type]'
+ 2361 |           __lhs = _CommonImpl::_S_blend(__k, __lhs, __rhs);
+      |                   ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/usr/include/c++/15.2.1/experimental/bits/simd.h:3654:25:   required from 'void std::experimental::parallelism_v2::where_expression<_M, _Tp>::operator=(_Up&&) && [with _Up = std::experimental::parallelism_v2::simd<_Float16>; _M = std::experimental::parallelism_v2::simd_mask<_Float16, std::experimental::parallelism_v2::simd_abi::_VecBuiltin<16> >; _Tp = std::experimental::parallelism_v2::simd<_Float16>]'
+ 3654 |         _Impl::_S_masked_assign(__data(_M_k), __data(_M_value),
+      |         ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3655 |                                 __to_value_type_or_member_type<_Tp>(
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3656 |                                   static_cast<_Up&&>(__x)));
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~
+reason_3/file.cpp:8:42:   required from here
+    8 |     std::experimental::where(m, x) = x + x;
+      |                                          ^
+/usr/include/c++/15.2.1/experimental/bits/simd_x86.h:802:20: error: no match for call to '(const std::experimental::parallelism_v2::_CommonImplX86::_S_blend_intrin<__vector(8) _Float16>(__vector(8) _Float16, __vector(8) _Float16, __vector(8) _Float16)::<unnamed struct>) (__vector(8) _Float16&, __vector(8) _Float16&, __vector(8) _Float16&)'
+  802 |       return __eval(__a, __b, __k);
+      |              ~~~~~~^~~~~~~~~~~~~~~
+/usr/include/c++/15.2.1/experimental/bits/simd_x86.h:758:7: note: there are 6 candidates
+  758 |       {
+      |       ^
+/usr/include/c++/15.2.1/experimental/bits/simd_x86.h:759:40: note: candidate 1: '__m128 std::experimental::parallelism_v2::_CommonImplX86::_S_blend_intrin(_Tp, _Tp, _Tp)::<unnamed struct>::operator()(__m128, __m128, __m128) const [with _Tp = __vector(8) _Float16; __m128 = __m128]'
+  759 |         _GLIBCXX_SIMD_INTRINSIC __m128 operator()(__m128 __a, __m128 __b,
+      |                                        ^~~~~~~~
+/usr/include/c++/15.2.1/experimental/bits/simd_x86.h:759:58: note: no known conversion for argument 1 from '__vector(8) _Float16' to '__m128'
+  759 |         _GLIBCXX_SIMD_INTRINSIC __m128 operator()(__m128 __a, __m128 __b,
+      |                                                   ~~~~~~~^~~
+/usr/include/c++/15.2.1/experimental/bits/simd_x86.h:764:41: note: candidate 2: '__m128d std::experimental::parallelism_v2::_CommonImplX86::_S_blend_intrin(_Tp, _Tp, _Tp)::<unnamed struct>::operator()(__m128d, __m128d, __m128d) const [with _Tp = __vector(8) _Float16; __m128d = __m128d]'
+  764 |         _GLIBCXX_SIMD_INTRINSIC __m128d operator()(__m128d __a, __m128d __b,
+      |                                         ^~~~~~~~
+/usr/include/c++/15.2.1/experimental/bits/simd_x86.h:764:60: note: no known conversion for argument 1 from '__vector(8) _Float16' to '__m128d'
+  764 |         _GLIBCXX_SIMD_INTRINSIC __m128d operator()(__m128d __a, __m128d __b,
+      |                                                    ~~~~~~~~^~~
+/usr/include/c++/15.2.1/experimental/bits/simd_x86.h:769:41: note: candidate 3: '__m128i std::experimental::parallelism_v2::_CommonImplX86::_S_blend_intrin(_Tp, _Tp, _Tp)::<unnamed struct>::operator()(__m128i, __m128i, __m128i) const [with _Tp = __vector(8) _Float16; __m128i = __m128i]'
+  769 |         _GLIBCXX_SIMD_INTRINSIC __m128i operator()(__m128i __a, __m128i __b,
+      |                                         ^~~~~~~~
+/usr/include/c++/15.2.1/experimental/bits/simd_x86.h:769:60: note: no known conversion for argument 1 from '__vector(8) _Float16' to '__m128i'
+  769 |         _GLIBCXX_SIMD_INTRINSIC __m128i operator()(__m128i __a, __m128i __b,
+      |                                                    ~~~~~~~~^~~
+/usr/include/c++/15.2.1/experimental/bits/simd_x86.h:777:40: note: candidate 4: '__m256 std::experimental::parallelism_v2::_CommonImplX86::_S_blend_intrin(_Tp, _Tp, _Tp)::<unnamed struct>::operator()(__m256, __m256, __m256) const [with _Tp = __vector(8) _Float16; __m256 = __m256]'
+  777 |         _GLIBCXX_SIMD_INTRINSIC __m256 operator()(__m256 __a, __m256 __b,
+      |                                        ^~~~~~~~
+/usr/include/c++/15.2.1/experimental/bits/simd_x86.h:777:58: note: no known conversion for argument 1 from '__vector(8) _Float16' to '__m256'
+  777 |         _GLIBCXX_SIMD_INTRINSIC __m256 operator()(__m256 __a, __m256 __b,
+      |                                                   ~~~~~~~^~~
+/usr/include/c++/15.2.1/experimental/bits/simd_x86.h:782:41: note: candidate 5: '__m256d std::experimental::parallelism_v2::_CommonImplX86::_S_blend_intrin(_Tp, _Tp, _Tp)::<unnamed struct>::operator()(__m256d, __m256d, __m256d) const [with _Tp = __vector(8) _Float16; __m256d = __m256d]'
+  782 |         _GLIBCXX_SIMD_INTRINSIC __m256d operator()(__m256d __a, __m256d __b,
+      |                                         ^~~~~~~~
+/usr/include/c++/15.2.1/experimental/bits/simd_x86.h:782:60: note: no known conversion for argument 1 from '__vector(8) _Float16' to '__m256d'
+  782 |         _GLIBCXX_SIMD_INTRINSIC __m256d operator()(__m256d __a, __m256d __b,
+      |                                                    ~~~~~~~~^~~
+/usr/include/c++/15.2.1/experimental/bits/simd_x86.h:787:41: note: candidate 6: '__m256i std::experimental::parallelism_v2::_CommonImplX86::_S_blend_intrin(_Tp, _Tp, _Tp)::<unnamed struct>::operator()(__m256i, __m256i, __m256i) const [with _Tp = __vector(8) _Float16; __m256i = __m256i]'
+  787 |         _GLIBCXX_SIMD_INTRINSIC __m256i operator()(__m256i __a, __m256i __b,
+      |                                         ^~~~~~~~
+/usr/include/c++/15.2.1/experimental/bits/simd_x86.h:787:60: note: no known conversion for argument 1 from '__vector(8) _Float16' to '__m256i'
+  787 |         _GLIBCXX_SIMD_INTRINSIC __m256i operator()(__m256i __a, __m256i __b,
+      |                                                    ~~~~~~~~^~~
